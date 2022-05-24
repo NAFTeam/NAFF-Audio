@@ -2,7 +2,7 @@ from pathlib import Path
 
 from setuptools import find_packages, setup
 
-from YTDL_Audio import __version__
+from naff_yt_audio import __version__
 
 setup(
     name="naff-ytaudio",
