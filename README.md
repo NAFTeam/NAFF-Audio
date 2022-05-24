@@ -1,6 +1,9 @@
 # NAFF YTAudio
 
 A NAFF audio object for playing audio from YT_DLP. 
+```
+pip install naff-ytaudio
+```
 
 ### Usage
 ```py
