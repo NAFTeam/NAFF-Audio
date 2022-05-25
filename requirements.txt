@@ -1,2 +1,2 @@
-naff
+naff[voice]
 yt_dlp
