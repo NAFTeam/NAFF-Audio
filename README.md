@@ -1,20 +1,12 @@
-# NAFF YTAudio
+# A collection of useful audio scripts for [NAFF](https://github.com/NAFTeam/NAFF)
 
-A NAFF audio object for playing audio from YT_DLP. 
-```
-pip install naff-ytaudio
-```
+## NAFF YTAudio
 
-### Usage
+A NAFF audio object for playing audio from YT_DLP.
+
 ```py
-from naff_yt_audio import YTAudio
+from naff_audio import YTAudio
 
 audio = await YTAudio.from_url("https://www.youtube.com/watch?v=ldyqHK0tbSc")
 await voice_state.play(audio)
-```
-And that's it, audio will be streamed from YouTube to NAFF. 
-
-If you'd rather download the audio first, simply add `stream=False`.
-```py
-audio = await YTAudio.from_url("https://www.youtube.com/watch?v=ldyqHK0tbSc", stream=False)
 ```

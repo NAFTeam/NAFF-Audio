@@ -2,10 +2,10 @@ from pathlib import Path
 
 from setuptools import find_packages, setup
 
-from naff_yt_audio import __version__
+from naff_audio import __version__
 
 setup(
-    name="naff-ytaudio",
+    name="naff-audio",
     description="",
     long_description=(Path(__file__).parent / "README.md").read_text(),
     long_description_content_type="text/markdown",
