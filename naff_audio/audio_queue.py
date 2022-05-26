@@ -1,7 +1,9 @@
 import asyncio
 import random
 from collections import deque
+from typing import Any, Iterator
 
+import item as item
 from naff import ActiveVoiceState
 from naff.api.voice.audio import BaseAudio
 
@@ -24,6 +26,9 @@ class NaffQueue:
 
     def __len__(self) -> int:
         return len(self._entries)
+
+    def __iter__(self) -> Iterator[BaseAudio]:
+        return iter(self._entries)
 
     def put(self, audio: BaseAudio) -> None:
         """
@@ -69,6 +74,33 @@ class NaffQueue:
     def clear(self) -> None:
         """Clear the queue."""
         self._entries.clear()
+
+    def peek(self, positions: int = 1) -> BaseAudio | None:
+        """
+        Peek ahead `position` in the queue.
+
+        Args:
+            positions: How many positions ahead to peek at.
+
+        Returns:
+            BaseAudio if anything at the given position
+        """
+        try:
+            return self._entries[positions - 1]
+        except IndexError:
+            return None
+
+    def peek_at_index(self, index: int) -> BaseAudio:
+        """
+        Peek at a specific Index
+
+        Args:
+            index: The index to peek at
+
+        Returns:
+            BaseAudio at given index
+        """
+        return self._entries[index]
 
     async def __playback_queue(self) -> None:
         """The queue task itself. While the vc is connected, it will play through the enqueued audio"""
