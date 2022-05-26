@@ -1,5 +1,9 @@
 # A collection of useful audio scripts for [NAFF](https://github.com/NAFTeam/NAFF)
 
+```
+pip install naff_audio
+```
+
 ## NAFF YTAudio
 
 A NAFF audio object for playing audio from YT_DLP.
