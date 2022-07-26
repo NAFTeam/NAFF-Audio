@@ -1,9 +1,8 @@
 import asyncio
 import random
 from collections import deque
-from typing import Any, Iterator
+from typing import Iterator
 
-import item as item
 from naff import ActiveVoiceState
 from naff.api.voice.audio import BaseAudio
 
